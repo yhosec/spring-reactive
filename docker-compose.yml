@@ -1,0 +1,23 @@
+version: '3'
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: DockerfileDb
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+  spring-reactive:
+    build: .
+    image: spring-reactive
+    container_name: spring-reactive
+    environment:
+      - CONTAINER_ENV=dev
+    ports:
+      - "8087:8080"
+    depends_on:
+      - postgres
+    links:
+      - postgres
