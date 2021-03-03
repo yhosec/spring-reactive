@@ -2,9 +2,16 @@ package com.josep.springreactive.controller;
 
 import com.josep.springreactive.entity.Country;
 import com.josep.springreactive.service.CountryService;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.util.Objects;
 
 @RestController
 public class CountryController {
@@ -17,5 +24,27 @@ public class CountryController {
     @GetMapping("/all")
     public Flux<Country> getAll() {
         return this.countryService.getAll();
+    }
+
+    @GetMapping("/find/{id}")
+    public Mono<Country> find(@PathVariable int id) {
+        return this.countryService.find(id);
+    }
+
+    @GetMapping("/findByCode/{code}")
+    public Mono<Country> find(@PathVariable String code) {
+        return this.countryService.findByCode(code);
+    }
+
+    @PostMapping("/save")
+    public Mono<Country> save(@RequestBody Country country) {
+        return Objects.isNull(country.getId()) ?
+            this.countryService.create(country) :
+            this.countryService.update(country);
+    }
+
+    @DeleteMapping("/{id}")
+    public Mono<Void> delete(@PathVariable int id) {
+        return this.countryService.delete(id);
     }
 }

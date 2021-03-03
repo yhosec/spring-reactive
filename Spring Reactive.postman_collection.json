@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "a3e1d9ec-583c-47ee-b723-b3505f2aabec",
+		"name": "Spring Reactive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8087/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"all"
+					]
+				},
+				"description": "Api for get all data country"
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8087/find/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"find",
+						"1"
+					]
+				},
+				"description": "Find Country data By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8087/findByCode/ID",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"findByCode",
+						"ID"
+					]
+				},
+				"description": "Find Country By Code"
+			},
+			"response": []
+		},
+		{
+			"name": "Insert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"TS\",\n    \"name\": \"Test 123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8087/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"code\": \"ID\",\n    \"name\": \"INDONESIA\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8087/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
