@@ -19,7 +19,12 @@ public class CountryService {
         return this.countryRepository
             .findAll();
     }
-
+    public Flux<Country> getAllInActive() {
+        return this.countryRepository.findCountriesByStatus("INACTIVE");
+    }
+    public Mono<Country> getInActiveId(Integer id) {
+        return this.countryRepository.findCountryByStatusAndId("INACTIVE", id);
+    }
     public Mono<Country> find(int id) {
         return this.countryRepository.findById(id);
     }

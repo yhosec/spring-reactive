@@ -1,257 +1,259 @@
 CREATE TABLE country (
-    id integer NOT NULL,
-    code character varying(3),
-    name character varying(64)
+id integer NOT NULL,
+code character varying(3),
+name character varying(64),
+status character varying(10)
 );
 
 CREATE SEQUENCE seq_country;
 ALTER TABLE country ALTER COLUMN id SET DEFAULT nextval('seq_country');
 
 
-insert into country values (NEXTVAL('seq_country'), 'ID','Indonesia');
-insert into country values (NEXTVAL('seq_country'), 'DZ','Algeria');
-insert into country values (NEXTVAL('seq_country'), 'AL','Albania');
-insert into country values (NEXTVAL('seq_country'), 'AD','Andorra');
-insert into country values (NEXTVAL('seq_country'), 'AO','Angola');
-insert into country values (NEXTVAL('seq_country'), 'AI','Anguilla');
-insert into country values (NEXTVAL('seq_country'), 'AQ','Antarctica');
-insert into country values (NEXTVAL('seq_country'), 'AR','Argentina');
-insert into country values (NEXTVAL('seq_country'), 'AM','Armenia');
-insert into country values (NEXTVAL('seq_country'), 'AW','Aruba');
-insert into country values (NEXTVAL('seq_country'), 'AU','Australia');
-insert into country values (NEXTVAL('seq_country'), 'AT','Austria');
-insert into country values (NEXTVAL('seq_country'), 'BS','Bahamas');
-insert into country values (NEXTVAL('seq_country'), 'BH','Bahrain');
-insert into country values (NEXTVAL('seq_country'), 'BD','Bangladesh');
-insert into country values (NEXTVAL('seq_country'), 'BY','Belarus');
-insert into country values (NEXTVAL('seq_country'), 'BE','Belgium');
-insert into country values (NEXTVAL('seq_country'), 'BZ','Belize');
-insert into country values (NEXTVAL('seq_country'), 'BJ','Benin');
-insert into country values (NEXTVAL('seq_country'), 'BT','Bhutan');
-insert into country values (NEXTVAL('seq_country'), 'BO','Bolivia');
-insert into country values (NEXTVAL('seq_country'), 'BW','Botswana');
-insert into country values (NEXTVAL('seq_country'), 'BV','Bouvet Island');
-insert into country values (NEXTVAL('seq_country'), 'BR','Brazil');
-insert into country values (NEXTVAL('seq_country'), 'IO','British Indian Ocean Territory');
-insert into country values (NEXTVAL('seq_country'), 'BN','Brunei Darussalam');
-insert into country values (NEXTVAL('seq_country'), 'BG','Bulgaria');
-insert into country values (NEXTVAL('seq_country'), 'BI','Burundi');
-insert into country values (NEXTVAL('seq_country'), 'CI','Cote D Ivoire');
-insert into country values (NEXTVAL('seq_country'), 'KH','Cambodia');
-insert into country values (NEXTVAL('seq_country'), 'CA','Canada');
-insert into country values (NEXTVAL('seq_country'), 'CV','Cape Verde');
-insert into country values (NEXTVAL('seq_country'), 'KY','Cayman Islands');
-insert into country values (NEXTVAL('seq_country'), 'CL','Chile');
-insert into country values (NEXTVAL('seq_country'), 'CN','China');
-insert into country values (NEXTVAL('seq_country'), 'CX','Christmas Island');
-insert into country values (NEXTVAL('seq_country'), 'CC','Cocos (Keeling) Islands');
-insert into country values (NEXTVAL('seq_country'), 'CO','Colombia');
-insert into country values (NEXTVAL('seq_country'), 'CG','Congo');
-insert into country values (NEXTVAL('seq_country'), 'CK','Cook Islands');
-insert into country values (NEXTVAL('seq_country'), 'CR','Costa Rica');
-insert into country values (NEXTVAL('seq_country'), 'HR','Croatia (local name: Hrvatska)');
-insert into country values (NEXTVAL('seq_country'), 'CU','Cuba');
-insert into country values (NEXTVAL('seq_country'), 'CY','Cyprus');
-insert into country values (NEXTVAL('seq_country'), 'CZ','Czech Republic');
-insert into country values (NEXTVAL('seq_country'), 'DK','Denmark');
-insert into country values (NEXTVAL('seq_country'), 'DJ','Djibouti');
-insert into country values (NEXTVAL('seq_country'), 'DO','Dominican Republic');
-insert into country values (NEXTVAL('seq_country'), 'EC','Ecuador');
-insert into country values (NEXTVAL('seq_country'), 'EG','Egypt');
-insert into country values (NEXTVAL('seq_country'), 'ER','Eritrea');
-insert into country values (NEXTVAL('seq_country'), 'EE','Estonia');
-insert into country values (NEXTVAL('seq_country'), 'ET','Ethiopia');
-insert into country values (NEXTVAL('seq_country'), 'FO','Faroe Islands');
-insert into country values (NEXTVAL('seq_country'), 'FJ','Fiji');
-insert into country values (NEXTVAL('seq_country'), 'FI','Finland');
-insert into country values (NEXTVAL('seq_country'), 'FR','France');
-insert into country values (NEXTVAL('seq_country'), 'GF','French Guiana');
-insert into country values (NEXTVAL('seq_country'), 'PF','French Polynesia');
-insert into country values (NEXTVAL('seq_country'), 'GA','Gabon');
-insert into country values (NEXTVAL('seq_country'), 'GE','Georgia');
-insert into country values (NEXTVAL('seq_country'), 'DE','Germany');
-insert into country values (NEXTVAL('seq_country'), 'GH','Ghana');
-insert into country values (NEXTVAL('seq_country'), 'GR','Greece');
-insert into country values (NEXTVAL('seq_country'), 'GL','Greenland');
-insert into country values (NEXTVAL('seq_country'), 'GD','Grenada');
-insert into country values (NEXTVAL('seq_country'), 'GP','Guadeloupe');
-insert into country values (NEXTVAL('seq_country'), 'GT','Guatemala');
-insert into country values (NEXTVAL('seq_country'), 'GN','Guinea');
-insert into country values (NEXTVAL('seq_country'), 'GY','Guyana');
-insert into country values (NEXTVAL('seq_country'), 'HT','Haiti');
-insert into country values (NEXTVAL('seq_country'), 'HM','Heard And Mcdonald Islands');
-insert into country values (NEXTVAL('seq_country'), 'HN','Honduras');
-insert into country values (NEXTVAL('seq_country'), 'HK','Hong Kong');
-insert into country values (NEXTVAL('seq_country'), 'IS','Iceland');
-insert into country values (NEXTVAL('seq_country'), 'IN','India');
-insert into country values (NEXTVAL('seq_country'), 'IQ','Iraq');
-insert into country values (NEXTVAL('seq_country'), 'IE','Ireland');
-insert into country values (NEXTVAL('seq_country'), 'IL','Israel');
-insert into country values (NEXTVAL('seq_country'), 'IT','Italy');
-insert into country values (NEXTVAL('seq_country'), 'JM','Jamaica');
-insert into country values (NEXTVAL('seq_country'), 'JO','Jordan');
-insert into country values (NEXTVAL('seq_country'), 'KZ','Kazakhstan');
-insert into country values (NEXTVAL('seq_country'), 'KE','Kenya');
-insert into country values (NEXTVAL('seq_country'), 'KI','Kiribati');
-insert into country values (NEXTVAL('seq_country'), 'KR','Korea Republic Of');
-insert into country values (NEXTVAL('seq_country'), 'KW','Kuwait');
-insert into country values (NEXTVAL('seq_country'), 'KG','Kyrgyzstan');
-insert into country values (NEXTVAL('seq_country'), 'LV','Latvia');
-insert into country values (NEXTVAL('seq_country'), 'LB','Lebanon');
-insert into country values (NEXTVAL('seq_country'), 'LS','Lesotho');
-insert into country values (NEXTVAL('seq_country'), 'LR','Liberia');
-insert into country values (NEXTVAL('seq_country'), 'LY','Libyan Arab Jamahiriya');
-insert into country values (NEXTVAL('seq_country'), 'LI','Liechtenstein');
-insert into country values (NEXTVAL('seq_country'), 'LT','Lithuania');
-insert into country values (NEXTVAL('seq_country'), 'MO','Macau');
-insert into country values (NEXTVAL('seq_country'), 'MK','Macedonia');
-insert into country values (NEXTVAL('seq_country'), 'MG','Madagascar');
-insert into country values (NEXTVAL('seq_country'), 'MW','Malawi');
-insert into country values (NEXTVAL('seq_country'), 'MV','Maldives');
-insert into country values (NEXTVAL('seq_country'), 'ML','Mali');
-insert into country values (NEXTVAL('seq_country'), 'MT','Malta');
-insert into country values (NEXTVAL('seq_country'), 'MQ','Martinique');
-insert into country values (NEXTVAL('seq_country'), 'MR','Mauritania');
-insert into country values (NEXTVAL('seq_country'), 'MU','Mauritius');
-insert into country values (NEXTVAL('seq_country'), 'MX','Mexico');
-insert into country values (NEXTVAL('seq_country'), 'MC','Monaco');
-insert into country values (NEXTVAL('seq_country'), 'MS','Montserrat');
-insert into country values (NEXTVAL('seq_country'), 'MA','Morocco');
-insert into country values (NEXTVAL('seq_country'), 'MZ','Mozambique');
-insert into country values (NEXTVAL('seq_country'), 'NA','Namibia');
-insert into country values (NEXTVAL('seq_country'), 'NR','Nauru');
-insert into country values (NEXTVAL('seq_country'), 'NP','Nepal');
-insert into country values (NEXTVAL('seq_country'), 'AN','Netherlands Antilles');
-insert into country values (NEXTVAL('seq_country'), 'NC','New Caledonia');
-insert into country values (NEXTVAL('seq_country'), 'NZ','New Zealand');
-insert into country values (NEXTVAL('seq_country'), 'NI','Nicaragua');
-insert into country values (NEXTVAL('seq_country'), 'NG','Nigeria');
-insert into country values (NEXTVAL('seq_country'), 'NU','Niue');
-insert into country values (NEXTVAL('seq_country'), 'NF','Norfolk Island');
-insert into country values (NEXTVAL('seq_country'), 'NO','Norway');
-insert into country values (NEXTVAL('seq_country'), 'RE','Reunion');
-insert into country values (NEXTVAL('seq_country'), 'TP','East Timor');
-insert into country values (NEXTVAL('seq_country'), 'YU','Yugoslavia');
-insert into country values (NEXTVAL('seq_country'), 'AF','Afghanistan');
-insert into country values (NEXTVAL('seq_country'), 'AS','American Samoa');
-insert into country values (NEXTVAL('seq_country'), 'AG','Antigua And Barbuda');
-insert into country values (NEXTVAL('seq_country'), 'AZ','Azerbaijan');
-insert into country values (NEXTVAL('seq_country'), 'BB','Barbados');
-insert into country values (NEXTVAL('seq_country'), 'BM','Bermuda');
-insert into country values (NEXTVAL('seq_country'), 'BA','Bosnia And Herzegowina');
-insert into country values (NEXTVAL('seq_country'), 'BF','Burkina Faso');
-insert into country values (NEXTVAL('seq_country'), 'CM','Cameroon');
-insert into country values (NEXTVAL('seq_country'), 'CF','Central African Republic');
-insert into country values (NEXTVAL('seq_country'), 'TD','Chad');
-insert into country values (NEXTVAL('seq_country'), 'KM','Comoros');
-insert into country values (NEXTVAL('seq_country'), 'CD','Congo The Democratic Republic Of The');
-insert into country values (NEXTVAL('seq_country'), 'DM','Dominica');
-insert into country values (NEXTVAL('seq_country'), 'SV','El Salvador');
-insert into country values (NEXTVAL('seq_country'), 'GQ','Equatorial Guinea');
-insert into country values (NEXTVAL('seq_country'), 'FK','Falkland Islands (Malvinas)');
-insert into country values (NEXTVAL('seq_country'), 'TF','French Southern Territories');
-insert into country values (NEXTVAL('seq_country'), 'GM','Gambia');
-insert into country values (NEXTVAL('seq_country'), 'GI','Gibraltar');
-insert into country values (NEXTVAL('seq_country'), 'GU','Guam');
-insert into country values (NEXTVAL('seq_country'), 'GW','Guinea-Bissau');
-insert into country values (NEXTVAL('seq_country'), 'VA','Holy See (Vatican City State)');
-insert into country values (NEXTVAL('seq_country'), 'HU','Hungary');
-insert into country values (NEXTVAL('seq_country'), 'IR','Iran (Islamic Republic Of)');
-insert into country values (NEXTVAL('seq_country'), 'JP','Japan');
-insert into country values (NEXTVAL('seq_country'), 'TL','TIMOR-LESTE');
-insert into country values (NEXTVAL('seq_country'), 'KP','Korea Democratic Peoples Republic Of');
-insert into country values (NEXTVAL('seq_country'), 'LA','Lao Peoples Democratic Republic');
-insert into country values (NEXTVAL('seq_country'), 'LU','Luxembourg');
-insert into country values (NEXTVAL('seq_country'), 'MY','Malaysia');
-insert into country values (NEXTVAL('seq_country'), 'MH','Marshall Islands');
-insert into country values (NEXTVAL('seq_country'), 'YT','Mayotte');
-insert into country values (NEXTVAL('seq_country'), 'MN','Mongolia');
-insert into country values (NEXTVAL('seq_country'), 'MM','Myanmar');
-insert into country values (NEXTVAL('seq_country'), 'NL','Netherlands');
-insert into country values (NEXTVAL('seq_country'), 'NE','Niger');
-insert into country values (NEXTVAL('seq_country'), 'MP','Northern Mariana Islands');
-insert into country values (NEXTVAL('seq_country'), 'OM','Oman');
-insert into country values (NEXTVAL('seq_country'), 'PK','Pakistan');
-insert into country values (NEXTVAL('seq_country'), 'PW','Palau');
-insert into country values (NEXTVAL('seq_country'), 'PS','Palestinian Territory');
-insert into country values (NEXTVAL('seq_country'), 'PA','Panama');
-insert into country values (NEXTVAL('seq_country'), 'PG','Papua New Guinea');
-insert into country values (NEXTVAL('seq_country'), 'PY','Paraguay');
-insert into country values (NEXTVAL('seq_country'), 'PE','Peru');
-insert into country values (NEXTVAL('seq_country'), 'PH','Philippines');
-insert into country values (NEXTVAL('seq_country'), 'PN','Pitcairn');
-insert into country values (NEXTVAL('seq_country'), 'PL','Poland');
-insert into country values (NEXTVAL('seq_country'), 'PT','Portugal');
-insert into country values (NEXTVAL('seq_country'), 'PR','Puerto Rico');
-insert into country values (NEXTVAL('seq_country'), 'QA','Qatar');
-insert into country values (NEXTVAL('seq_country'), 'RO','Romania');
-insert into country values (NEXTVAL('seq_country'), 'RU','Russian Federation');
-insert into country values (NEXTVAL('seq_country'), 'RW','Rwanda');
-insert into country values (NEXTVAL('seq_country'), 'SH','St. Helena');
-insert into country values (NEXTVAL('seq_country'), 'KN','Saint Kitts And Nevis');
-insert into country values (NEXTVAL('seq_country'), 'LC','Saint Lucia');
-insert into country values (NEXTVAL('seq_country'), 'PM','St. Pierre And Miquelon');
-insert into country values (NEXTVAL('seq_country'), 'VC','Saint Vincent And The Grenadines');
-insert into country values (NEXTVAL('seq_country'), 'WS','Samoa');
-insert into country values (NEXTVAL('seq_country'), 'SM','San Marino');
-insert into country values (NEXTVAL('seq_country'), 'ST','Sao Tome And Principe');
-insert into country values (NEXTVAL('seq_country'), 'SA','Saudi Arabia');
-insert into country values (NEXTVAL('seq_country'), 'SN','Senegal');
-insert into country values (NEXTVAL('seq_country'), 'SC','Seychelles');
-insert into country values (NEXTVAL('seq_country'), 'SL','Sierra Leone');
-insert into country values (NEXTVAL('seq_country'), 'SG','Singapore');
-insert into country values (NEXTVAL('seq_country'), 'SK','Slovakia (Slovak Republic)');
-insert into country values (NEXTVAL('seq_country'), 'SI','Slovenia');
-insert into country values (NEXTVAL('seq_country'), 'SB','Solomon Islands');
-insert into country values (NEXTVAL('seq_country'), 'SO','Somalia');
-insert into country values (NEXTVAL('seq_country'), 'ZA','South Africa');
-insert into country values (NEXTVAL('seq_country'), 'GS','South Georgia And The South Sandwich Islands');
-insert into country values (NEXTVAL('seq_country'), 'ES','Spain');
-insert into country values (NEXTVAL('seq_country'), 'LK','Sri Lanka');
-insert into country values (NEXTVAL('seq_country'), 'SD','Sudan');
-insert into country values (NEXTVAL('seq_country'), 'SR','Suriname');
-insert into country values (NEXTVAL('seq_country'), 'SJ','Svalbard And Jan Mayen Islands');
-insert into country values (NEXTVAL('seq_country'), 'SZ','Swaziland');
-insert into country values (NEXTVAL('seq_country'), 'SE','Sweden');
-insert into country values (NEXTVAL('seq_country'), 'CH','Switzerland');
-insert into country values (NEXTVAL('seq_country'), 'SY','Syrian Arab Republic');
-insert into country values (NEXTVAL('seq_country'), 'TW','Taiwan');
-insert into country values (NEXTVAL('seq_country'), 'TJ','Tajikistan');
-insert into country values (NEXTVAL('seq_country'), 'TZ','Tanzania');
-insert into country values (NEXTVAL('seq_country'), 'TH','Thailand');
-insert into country values (NEXTVAL('seq_country'), 'TG','Togo');
-insert into country values (NEXTVAL('seq_country'), 'TK','Tokelau');
-insert into country values (NEXTVAL('seq_country'), 'TO','Tonga');
-insert into country values (NEXTVAL('seq_country'), 'TT','Trinidad And Tobago');
-insert into country values (NEXTVAL('seq_country'), 'TN','Tunisia');
-insert into country values (NEXTVAL('seq_country'), 'TR','Turkey');
-insert into country values (NEXTVAL('seq_country'), 'TM','Turkmenistan');
-insert into country values (NEXTVAL('seq_country'), 'TC','Turks And Caicos Islands');
-insert into country values (NEXTVAL('seq_country'), 'TV','Tuvalu');
-insert into country values (NEXTVAL('seq_country'), 'UG','Uganda');
-insert into country values (NEXTVAL('seq_country'), 'UA','Ukraine');
-insert into country values (NEXTVAL('seq_country'), 'AE','United Arab Emirates');
-insert into country values (NEXTVAL('seq_country'), 'GB','United Kingdom');
-insert into country values (NEXTVAL('seq_country'), 'US','United States');
-insert into country values (NEXTVAL('seq_country'), 'UM','United States Minor Outlying Islands');
-insert into country values (NEXTVAL('seq_country'), 'UY','Uruguay');
-insert into country values (NEXTVAL('seq_country'), 'UZ','Uzbekistan');
-insert into country values (NEXTVAL('seq_country'), 'VU','Vanuatu');
-insert into country values (NEXTVAL('seq_country'), 'VE','Venezuela');
-insert into country values (NEXTVAL('seq_country'), 'VN','Vietnam ');
-insert into country values (NEXTVAL('seq_country'), 'VG','Virgin Islands (British)');
-insert into country values (NEXTVAL('seq_country'), 'VI','Virgin Islands (U.S.)');
-insert into country values (NEXTVAL('seq_country'), 'WF','Wallis And Futuna Islands');
-insert into country values (NEXTVAL('seq_country'), 'EH','Western Sahara');
-insert into country values (NEXTVAL('seq_country'), 'YE','Yemen');
-insert into country values (NEXTVAL('seq_country'), 'ZM','Zambia');
-insert into country values (NEXTVAL('seq_country'), 'ZW','Zimbabwe');
-insert into country values (NEXTVAL('seq_country'), 'RS','SERBIA');
-insert into country values (NEXTVAL('seq_country'), 'EU','EUROPEAN UNION');
-insert into country values (NEXTVAL('seq_country'), 'ME','MONTENEGRO');
-insert into country values (NEXTVAL('seq_country'), 'MD','MOLDOVA, REPUBLIC OF');
-insert into country values (NEXTVAL('seq_country'), 'KS','KOSOVO, REPUBLIC OF');
-insert into country values (NEXTVAL('seq_country'), 'FM','MICRONESIA, FEDERATED STATES OF');
-insert into country values (NEXTVAL('seq_country'), 'IM','ISLE OF MAN');
-insert into country values (NEXTVAL('seq_country'), 'SS','SOUTH SUDAN');
-insert into country values (NEXTVAL('seq_country'), 'JE','JERSEY');
+insert into country (code, name, status) values
+('ID','Indonesia', 'ACTIVE'),
+('DZ','Algeria', 'ACTIVE'),
+('AL','Albania', 'ACTIVE'),
+('AD','Andorra', 'ACTIVE'),
+('AO','Angola', 'ACTIVE'),
+('AI','Anguilla', 'ACTIVE'),
+('AQ','Antarctica', 'ACTIVE'),
+('AR','Argentina', 'ACTIVE'),
+('AM','Armenia', 'ACTIVE'),
+('AW','Aruba', 'ACTIVE'),
+('AU','Australia', 'ACTIVE'),
+('AT','Austria', 'ACTIVE'),
+('BS','Bahamas', 'ACTIVE'),
+('BH','Bahrain', 'ACTIVE'),
+('BD','Bangladesh', 'ACTIVE'),
+('BY','Belarus', 'ACTIVE'),
+('BE','Belgium', 'ACTIVE'),
+('BZ','Belize', 'ACTIVE'),
+('BJ','Benin', 'ACTIVE'),
+('BT','Bhutan', 'ACTIVE'),
+('BO','Bolivia', 'ACTIVE'),
+('BW','Botswana', 'ACTIVE'),
+('BV','Bouvet Island', 'ACTIVE'),
+('BR','Brazil', 'ACTIVE'),
+('IO','British Indian Ocean Territory', 'ACTIVE'),
+('BN','Brunei Darussalam', 'ACTIVE'),
+('BG','Bulgaria', 'ACTIVE'),
+('BI','Burundi', 'ACTIVE'),
+('CI','Cote D Ivoire', 'ACTIVE'),
+('KH','Cambodia', 'ACTIVE'),
+('CA','Canada', 'ACTIVE'),
+('CV','Cape Verde', 'ACTIVE'),
+('KY','Cayman Islands', 'ACTIVE'),
+('CL','Chile', 'ACTIVE'),
+('CN','China', 'ACTIVE'),
+('CX','Christmas Island', 'ACTIVE'),
+('CC','Cocos (Keeling) Islands', 'ACTIVE'),
+('CO','Colombia', 'ACTIVE'),
+('CG','Congo', 'ACTIVE'),
+('CK','Cook Islands', 'ACTIVE'),
+('CR','Costa Rica', 'ACTIVE'),
+('HR','Croatia (local name: Hrvatska)', 'ACTIVE'),
+('CU','Cuba', 'ACTIVE'),
+('CY','Cyprus', 'ACTIVE'),
+('CZ','Czech Republic', 'ACTIVE'),
+('DK','Denmark', 'ACTIVE'),
+('DJ','Djibouti', 'ACTIVE'),
+('DO','Dominican Republic', 'ACTIVE'),
+('EC','Ecuador', 'ACTIVE'),
+('EG','Egypt', 'ACTIVE'),
+('ER','Eritrea', 'ACTIVE'),
+('EE','Estonia', 'ACTIVE'),
+('ET','Ethiopia', 'ACTIVE'),
+('FO','Faroe Islands', 'ACTIVE'),
+('FJ','Fiji', 'ACTIVE'),
+('FI','Finland', 'ACTIVE'),
+('FR','France', 'ACTIVE'),
+('GF','French Guiana', 'ACTIVE'),
+('PF','French Polynesia', 'ACTIVE'),
+('GA','Gabon', 'ACTIVE'),
+('GE','Georgia', 'ACTIVE'),
+('DE','Germany', 'ACTIVE'),
+('GH','Ghana', 'ACTIVE'),
+('GR','Greece', 'ACTIVE'),
+('GL','Greenland', 'ACTIVE'),
+('GD','Grenada', 'ACTIVE'),
+('GP','Guadeloupe', 'ACTIVE'),
+('GT','Guatemala', 'ACTIVE'),
+('GN','Guinea', 'ACTIVE'),
+('GY','Guyana', 'ACTIVE'),
+('HT','Haiti', 'ACTIVE'),
+('HM','Heard And Mcdonald Islands', 'ACTIVE'),
+('HN','Honduras', 'ACTIVE'),
+('HK','Hong Kong', 'ACTIVE'),
+('IS','Iceland', 'ACTIVE'),
+('IN','India', 'ACTIVE'),
+('IQ','Iraq', 'ACTIVE'),
+('IE','Ireland', 'ACTIVE'),
+('IL','Israel', 'ACTIVE'),
+('IT','Italy', 'ACTIVE'),
+('JM','Jamaica', 'ACTIVE'),
+('JO','Jordan', 'ACTIVE'),
+('KZ','Kazakhstan', 'ACTIVE'),
+('KE','Kenya', 'ACTIVE'),
+('KI','Kiribati', 'ACTIVE'),
+('KR','Korea Republic Of', 'ACTIVE'),
+('KW','Kuwait', 'ACTIVE'),
+('KG','Kyrgyzstan', 'ACTIVE'),
+('LV','Latvia', 'ACTIVE'),
+('LB','Lebanon', 'ACTIVE'),
+('LS','Lesotho', 'ACTIVE'),
+('LR','Liberia', 'ACTIVE'),
+('LY','Libyan Arab Jamahiriya', 'ACTIVE'),
+('LI','Liechtenstein', 'ACTIVE'),
+('LT','Lithuania', 'ACTIVE'),
+('MO','Macau', 'ACTIVE'),
+('MK','Macedonia', 'ACTIVE'),
+('MG','Madagascar', 'ACTIVE'),
+('MW','Malawi', 'ACTIVE'),
+('MV','Maldives', 'ACTIVE'),
+('ML','Mali', 'ACTIVE'),
+('MT','Malta', 'ACTIVE'),
+('MQ','Martinique', 'ACTIVE'),
+('MR','Mauritania', 'ACTIVE'),
+('MU','Mauritius', 'ACTIVE'),
+('MX','Mexico', 'ACTIVE'),
+('MC','Monaco', 'ACTIVE'),
+('MS','Montserrat', 'ACTIVE'),
+('MA','Morocco', 'ACTIVE'),
+('MZ','Mozambique', 'ACTIVE'),
+('NA','Namibia', 'ACTIVE'),
+('NR','Nauru', 'ACTIVE'),
+('NP','Nepal', 'ACTIVE'),
+('AN','Netherlands Antilles', 'ACTIVE'),
+('NC','New Caledonia', 'ACTIVE'),
+('NZ','New Zealand', 'ACTIVE'),
+('NI','Nicaragua', 'ACTIVE'),
+('NG','Nigeria', 'ACTIVE'),
+('NU','Niue', 'ACTIVE'),
+('NF','Norfolk Island', 'ACTIVE'),
+('NO','Norway', 'ACTIVE'),
+('RE','Reunion', 'ACTIVE'),
+('TP','East Timor', 'ACTIVE'),
+('YU','Yugoslavia', 'ACTIVE'),
+('AF','Afghanistan', 'ACTIVE'),
+('AS','American Samoa', 'ACTIVE'),
+('AG','Antigua And Barbuda', 'ACTIVE'),
+('AZ','Azerbaijan', 'ACTIVE'),
+('BB','Barbados', 'ACTIVE'),
+('BM','Bermuda', 'ACTIVE'),
+('BA','Bosnia And Herzegowina', 'ACTIVE'),
+('BF','Burkina Faso', 'ACTIVE'),
+('CM','Cameroon', 'ACTIVE'),
+('CF','Central African Republic', 'ACTIVE'),
+('TD','Chad', 'ACTIVE'),
+('KM','Comoros', 'ACTIVE'),
+('CD','Congo The Democratic Republic Of The', 'ACTIVE'),
+('DM','Dominica', 'ACTIVE'),
+('SV','El Salvador', 'ACTIVE'),
+('GQ','Equatorial Guinea', 'ACTIVE'),
+('FK','Falkland Islands (Malvinas)', 'ACTIVE'),
+('TF','French Southern Territories', 'ACTIVE'),
+('GM','Gambia', 'ACTIVE'),
+('GI','Gibraltar', 'ACTIVE'),
+('GU','Guam', 'ACTIVE'),
+('GW','Guinea-Bissau', 'ACTIVE'),
+('VA','Holy See (Vatican City State)', 'ACTIVE'),
+('HU','Hungary', 'ACTIVE'),
+('IR','Iran (Islamic Republic Of)', 'ACTIVE'),
+('JP','Japan', 'ACTIVE'),
+('TL','TIMOR-LESTE', 'ACTIVE'),
+('KP','Korea Democratic Peoples Republic Of', 'ACTIVE'),
+('LA','Lao Peoples Democratic Republic', 'ACTIVE'),
+('LU','Luxembourg', 'ACTIVE'),
+('MY','Malaysia', 'ACTIVE'),
+('MH','Marshall Islands', 'ACTIVE'),
+('YT','Mayotte', 'ACTIVE'),
+('MN','Mongolia', 'ACTIVE'),
+('MM','Myanmar', 'ACTIVE'),
+('NL','Netherlands', 'ACTIVE'),
+('NE','Niger', 'ACTIVE'),
+('MP','Northern Mariana Islands', 'ACTIVE'),
+('OM','Oman', 'ACTIVE'),
+('PK','Pakistan', 'ACTIVE'),
+('PW','Palau', 'ACTIVE'),
+('PS','Palestinian Territory', 'ACTIVE'),
+('PA','Panama', 'ACTIVE'),
+('PG','Papua New Guinea', 'ACTIVE'),
+('PY','Paraguay', 'ACTIVE'),
+('PE','Peru', 'ACTIVE'),
+('PH','Philippines', 'ACTIVE'),
+('PN','Pitcairn', 'ACTIVE'),
+('PL','Poland', 'ACTIVE'),
+('PT','Portugal', 'ACTIVE'),
+('PR','Puerto Rico', 'ACTIVE'),
+('QA','Qatar', 'ACTIVE'),
+('RO','Romania', 'ACTIVE'),
+('RU','Russian Federation', 'ACTIVE'),
+('RW','Rwanda', 'ACTIVE'),
+('SH','St. Helena', 'ACTIVE'),
+('KN','Saint Kitts And Nevis', 'ACTIVE'),
+('LC','Saint Lucia', 'ACTIVE'),
+('PM','St. Pierre And Miquelon', 'ACTIVE'),
+('VC','Saint Vincent And The Grenadines', 'ACTIVE'),
+('WS','Samoa', 'ACTIVE'),
+('SM','San Marino', 'ACTIVE'),
+('ST','Sao Tome And Principe', 'ACTIVE'),
+('SA','Saudi Arabia', 'ACTIVE'),
+('SN','Senegal', 'ACTIVE'),
+('SC','Seychelles', 'ACTIVE'),
+('SL','Sierra Leone', 'ACTIVE'),
+('SG','Singapore', 'ACTIVE'),
+('SK','Slovakia (Slovak Republic)', 'ACTIVE'),
+('SI','Slovenia', 'ACTIVE'),
+('SB','Solomon Islands', 'ACTIVE'),
+('SO','Somalia', 'ACTIVE'),
+('ZA','South Africa', 'ACTIVE'),
+('GS','South Georgia And The South Sandwich Islands', 'ACTIVE'),
+('ES','Spain', 'ACTIVE'),
+('LK','Sri Lanka', 'ACTIVE'),
+('SD','Sudan', 'ACTIVE'),
+('SR','Suriname', 'ACTIVE'),
+('SJ','Svalbard And Jan Mayen Islands', 'ACTIVE'),
+('SZ','Swaziland', 'ACTIVE'),
+('SE','Sweden', 'ACTIVE'),
+('CH','Switzerland', 'ACTIVE'),
+('SY','Syrian Arab Republic', 'ACTIVE'),
+('TW','Taiwan', 'ACTIVE'),
+('TJ','Tajikistan', 'ACTIVE'),
+('TZ','Tanzania', 'ACTIVE'),
+('TH','Thailand', 'ACTIVE'),
+('TG','Togo', 'ACTIVE'),
+('TK','Tokelau', 'ACTIVE'),
+('TO','Tonga', 'ACTIVE'),
+('TT','Trinidad And Tobago', 'ACTIVE'),
+('TN','Tunisia', 'ACTIVE'),
+('TR','Turkey', 'ACTIVE'),
+('TM','Turkmenistan', 'ACTIVE'),
+('TC','Turks And Caicos Islands', 'ACTIVE'),
+('TV','Tuvalu', 'ACTIVE'),
+('UG','Uganda', 'ACTIVE'),
+('UA','Ukraine', 'ACTIVE'),
+('AE','United Arab Emirates', 'ACTIVE'),
+('GB','United Kingdom', 'ACTIVE'),
+('US','United States', 'ACTIVE'),
+('UM','United States Minor Outlying Islands', 'ACTIVE'),
+('UY','Uruguay', 'ACTIVE'),
+('UZ','Uzbekistan', 'ACTIVE'),
+('VU','Vanuatu', 'ACTIVE'),
+('VE','Venezuela', 'ACTIVE'),
+('VN','Vietnam ', 'ACTIVE'),
+('VG','Virgin Islands (British)', 'ACTIVE'),
+('VI','Virgin Islands (U.S.)', 'ACTIVE'),
+('WF','Wallis And Futuna Islands', 'ACTIVE'),
+('EH','Western Sahara', 'ACTIVE'),
+('YE','Yemen', 'ACTIVE'),
+('ZM','Zambia', 'ACTIVE'),
+('ZW','Zimbabwe', 'ACTIVE'),
+('RS','SERBIA', 'ACTIVE'),
+('EU','EUROPEAN UNION', 'ACTIVE'),
+('ME','MONTENEGRO', 'ACTIVE'),
+('MD','MOLDOVA, REPUBLIC OF', 'ACTIVE'),
+('KS','KOSOVO, REPUBLIC OF', 'ACTIVE'),
+('FM','MICRONESIA, FEDERATED STATES OF', 'ACTIVE'),
+('IM','ISLE OF MAN', 'ACTIVE'),
+('SS','SOUTH SUDAN', 'ACTIVE'),
+('JE','JERSEY', 'ACTIVE');
